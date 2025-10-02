@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,13 +15,144 @@
 }
 
 body {
+
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height to accommodate scroll bar */
+  overflow-y: scroll; /* Allow scrollbar to stay */
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.filter-outlined {
+  filter: grayscale(100%) contrast(200%) brightness(150%) invert(100%);
+}
+
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+
+
+.carousel_wrapper {
+  position: relative;
+  width: 40px;
+  height:250px;
+  margin: 100px auto 100px auto;
+  perspective: 1000px;
+
+}
+
+.carousel {
+  position: absolute; /* Change this to relative */
+  width: 100%;
+  height:100%;
+  margin-top: 30px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transform: rotateY(0deg);
+  animation: swirl 20s linear infinite;
+}
+
+
+.slide {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 67px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.slide img {
+  width: 200px;
+  height: 75px;
+  border: 3px inset rgba(47, 115, 201, 0.75);
+  box-shadow: 0 0 15px 3px rgba(110, 72, 221, 0.9);
+}
+
+.slide h3 {
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.slide p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Add transformations for each slide */
+.slide-1 {
+  transform: rotateY(0deg) translateZ(350px);
+}
+
+.slide-2 {
+  transform: rotateY(36deg) translateZ(350px);
+}
+
+.slide-3 {
+  transform: rotateY(72deg) translateZ(350px);
+}
+
+.slide-4 {
+  transform: rotateY(108deg) translateZ(350px);
+}
+.slide-5 {
+  transform: rotateY(144deg) translateZ(350px);
+}
+.slide-6 {
+  transform: rotateY(180deg) translateZ(350px);
+}
+.slide-7 {
+  transform: rotateY(216deg) translateZ(350px);
+}
+.slide-8 {
+  transform: rotateY(252deg) translateZ(350px);
+}
+.slide-9 {
+  transform: rotateY(288deg) translateZ(350px);
+}
+.slide-10 {
+  transform: rotateY(324deg) translateZ(350px);
+}
+
+/* CSS3 ANIMATION */
+@keyframes swirl {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes gradient-xy{
+  0%, 100%{
+    background-position:0% 50%;
+
+}
+50%{
+  background-position: 100% 50%;
+}
+
+
+}
+.animate-gradient-xy{
+  animation: gradient-xy 5s ease infinite;
+  background-size: 200% 200%;
+} 
