@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import profilepic from "../assets/profilepic.png";
-import cursor from "../assets/icon1.png"; // Ensure this is imported correctly
+// import cursor from "../assets/icon1.png"; // Ensure this is imported correctly
 
 const Hero = () => {
   return (
