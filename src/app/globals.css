@@ -43,10 +43,10 @@ html, body {
 :root {
   /* Mobile / Small Screen Defaults (0px to 767px) */
   --carousel-size: 100px; /* Smaller overall size for mobile */
-  --slide-width: 700px;
-  --slide-height: 20px;
-  --translate-z: 50px; /* Reduced depth for mobile */
-  --perspective: 100px; 
+  --slide-width: 100px;
+  --slide-height: 50px;
+  --translate-z: 80px; /* Reduced depth for mobile */
+  --perspective: 50px; 
 }
 
 /* Base Styles (Mobile First) */
