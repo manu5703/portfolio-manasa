@@ -40,7 +40,7 @@ const Hero = () => {
           <Image
             src={profilepic}
             alt="Profile Picture"
-            className="h-auto w-auto mx-auto"
+            className="h-100 w-100 mx-auto"
           />
         </motion.div>
       </div>
