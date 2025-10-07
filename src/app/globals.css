@@ -46,7 +46,7 @@ html, body {
   --slide-width: 100px;
   --slide-height: 50px;
   --translate-z: 80px; /* Reduced depth for mobile */
-  --perspective: 50px; 
+  --perspective: 100px; 
 }
 
 /* Base Styles (Mobile First) */
