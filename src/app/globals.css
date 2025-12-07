@@ -163,3 +163,55 @@ html, body {
   animation: gradient-xy 15s ease infinite;
   background-size: 200% 200%;
 } 
+
+/* Experience.css */
+
+/* Central vertical timeline line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dot on the timeline */
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #f97316; /* orange-500 */
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+}
+
+/* Connecting line from center to card */
+.timeline-connector {
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 6px; /* Align with dot vertically */
+  width: 80px; /* Length of connecting line */
+}
+
+.timeline-connector-left {
+  right: 100%; /* Extend to left card */
+}
+
+.timeline-connector-right {
+  left: 100%; /* Extend to right card */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-card {
+    width: 90% !important;
+    text-align: center !important;
+  }
+  .timeline-connector {
+    display: none; /* hide connectors on small screens */
+  }
+}

@@ -4,6 +4,7 @@ import Carousel from "@/components/Carousel";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Portfolio from "@/components/Portfolio";
+import Experience from "@/components/Experience";
 // import Image from "next/image";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Experience />
       <Carousel />
       <Portfolio />
     </>
