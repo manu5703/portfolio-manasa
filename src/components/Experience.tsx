@@ -70,7 +70,10 @@ const Experience = () => {
               <div key={index} className="flex w-full relative items-center">
                 {/* Left Card */}
                 {!isLeft && (
-                  <div className="w-5/12 pr-8 text-left ml-auto">
+                  <div
+                    className="w-5/12 pr-8 text-left ml-auto 
+                max-md:w-full max-md:pl-0 max-md:pr-0 max-md:mx-auto"
+                  >
                     <div
                       className={`timeline-card ${color} backdrop-blur-lg border-white/20 rounded-xl p-6 text-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40`}
                     >
@@ -96,7 +99,10 @@ const Experience = () => {
 
                 {/* Right Card */}
                 {isLeft && (
-                  <div className="w-5/12 pl-8 text-left mr-auto">
+                  <div
+                    className="w-5/12 pl-8 text-left mr-auto 
+                max-md:w-full max-md:pl-0 max-md:pr-0 max-md:mx-auto"
+                  >
                     <div
                       className={`timeline-card ${color} backdrop-blur-lg border-white/20 rounded-xl p-6 text-white transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/40`}
                     >
