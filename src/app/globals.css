@@ -7,12 +7,6 @@
   --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
 
@@ -45,101 +39,114 @@ html, body {
     text-wrap: balance;
   }
 }
+/* Define key variables for easy adjustments */
+:root {
+  /* Mobile / Small Screen Defaults (0px to 767px) */
+  --carousel-size: 100px; /* Smaller overall size for mobile */
+  --slide-width: 100px;
+  --slide-height: 50px;
+  --translate-z: 80px; /* Reduced depth for mobile */
+  --perspective: 100px; 
+}
 
-
+/* Base Styles (Mobile First) */
 
 .carousel_wrapper {
   position: relative;
-  width: 40px;
-  height:250px;
-  margin: 100px auto 100px auto;
-  perspective: 1000px;
-
+  /* Use variables for flexibility */
+  width: var(--carousel-size);
+  height: var(--carousel-size);
+  margin: 100px auto;
+  perspective: var(--perspective); 
+  /* Add slight horizontal padding to prevent content from touching the edge of the viewport */
+  padding: 0 10px; 
+  box-sizing: content-box; /* Important for fixed size */
 }
 
 .carousel {
-  position: absolute; /* Change this to relative */
+  position: absolute; 
   width: 100%;
-  height:100%;
+  height: 100%;
   margin-top: 30px;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; /* Keep 3D effect on mobile */
   transform-origin: center;
   transform: rotateY(0deg);
-  animation: swirl 20s linear infinite;
+  animation: swirl 20s linear infinite; /* Keep animation on mobile */
 }
-
 
 .slide {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 100px;
-  height: 67px;
+  /* Center the slide within the wrapper using the defined size */
+  top: calc(50% - (var(--slide-height) / 2));
+  left: calc(50% - (var(--slide-width) / 2));
+  width: var(--slide-width);
+  height: var(--slide-height);
   background-color: rgba(255, 255, 255, 0.1);
   text-align: center;
+  padding: 10px; 
+  border-radius: 8px; 
 }
 
 .slide img {
-  width: 200px;
-  height: 75px;
+  /* Let the image scale within the slide */
+  max-width: 90%;
+  height: auto;
+  max-height: 50%; /* Adjusted for smaller slide height */
   border: 3px inset rgba(47, 115, 201, 0.75);
   box-shadow: 0 0 15px 3px rgba(110, 72, 221, 0.9);
+  margin-bottom: 5px;
 }
 
 .slide h3 {
   color: white;
-  font-size: 18px;
-  margin: 10px 0;
+  font-size: 1rem; /* Smaller font for mobile */
+  margin: 5px 0;
 }
 
 .slide p {
   color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem; /* Smaller font for mobile */
+  /* Hide description on smallest screens if needed, otherwise keep it visible */
+  display: block; 
 }
 
-/* Add transformations for each slide */
-.slide-1 {
-  transform: rotateY(0deg) translateZ(350px);
+/* --- MEDIA QUERY for Tablets and Desktops (768px and up) --- */
+@media (min-width: 768px) {
+  :root {
+      --carousel-size: 250px; /* Base width/height for the wrapper/slides */
+  --slide-width: 200px;
+  --slide-height: 150px;
+  --translate-z: 400px; /* How far from the center the slides sit */
+  --perspective: 900px; /* 3D perspective distance */
+  }
+  
+  .slide h3 {
+    font-size: 1.5rem;
+  }
+  .slide p {
+    font-size: 1rem;
+  }
 }
 
-.slide-2 {
-  transform: rotateY(36deg) translateZ(350px);
-}
+/* Re-apply the transformations using the responsive variable */
+/* These remain the same, as the CSS variable handles the responsive scaling */
+.slide-1 { transform: rotateY(0deg) translateZ(var(--translate-z)); }
+.slide-2 { transform: rotateY(36deg) translateZ(var(--translate-z)); }
+.slide-3 { transform: rotateY(72deg) translateZ(var(--translate-z)); }
+.slide-4 { transform: rotateY(108deg) translateZ(var(--translate-z)); }
+.slide-5 { transform: rotateY(144deg) translateZ(var(--translate-z)); }
+.slide-6 { transform: rotateY(180deg) translateZ(var(--translate-z)); }
+.slide-7 { transform: rotateY(216deg) translateZ(var(--translate-z)); }
+.slide-8 { transform: rotateY(252deg) translateZ(var(--translate-z)); }
+.slide-9 { transform: rotateY(288deg) translateZ(var(--translate-z)); }
+.slide-10 { transform: rotateY(324deg) translateZ(var(--translate-z)); }
 
-.slide-3 {
-  transform: rotateY(72deg) translateZ(350px);
-}
-
-.slide-4 {
-  transform: rotateY(108deg) translateZ(350px);
-}
-.slide-5 {
-  transform: rotateY(144deg) translateZ(350px);
-}
-.slide-6 {
-  transform: rotateY(180deg) translateZ(350px);
-}
-.slide-7 {
-  transform: rotateY(216deg) translateZ(350px);
-}
-.slide-8 {
-  transform: rotateY(252deg) translateZ(350px);
-}
-.slide-9 {
-  transform: rotateY(288deg) translateZ(350px);
-}
-.slide-10 {
-  transform: rotateY(324deg) translateZ(350px);
-}
-
-/* CSS3 ANIMATION */
+/* Keyframe animation remains the same */
 @keyframes swirl {
-  from {
-    transform: rotateY(360deg);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
 }
+
 
 @keyframes gradient-xy{
   0%, 100%{
