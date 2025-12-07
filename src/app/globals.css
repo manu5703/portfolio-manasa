@@ -131,10 +131,10 @@ html, body {
 /* --- MEDIA QUERY for Mobile Screens (below 768px) --- */
 @media (max-width: 767px) {
   :root {
-    --carousel-size: 180px;   /* smaller carousel wrapper */
-    --slide-width: 140px;
+    --carousel-size: 150px;   /* smaller carousel wrapper */
+    --slide-width: 120px;
     --slide-height: 100px;
-    --translate-z: 250px;     /* reduce 3D depth for mobile */
+    --translate-z: 200px;     /* reduce 3D depth for mobile */
     --perspective: 600px;     /* smaller perspective */
   }
 
@@ -299,8 +299,8 @@ html, body {
 
   .timeline-card {
     width: 100% !important;
-    margin-left: 2.2rem;
-    margin-right: 2.2rem;
+    max-width: 90%;    /* ensures margins show on BOTH sides */
+    margin: 0 auto;    /* centers the card perfectly */
   }
 
   .timeline-connector {
