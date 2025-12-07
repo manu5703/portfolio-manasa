@@ -10,52 +10,62 @@ import finance from "../assets/finance.png";
 const projects = [
   {
     id: 1,
-    title: "Project 1",
+    title: "Python",
+    title2: "C",
     image: book,
   },
   {
     id: 2,
-    title: "Project 2",
+    title: "Java",
+    title2: "JS",
     image: pc,
   },
   {
     id: 3,
-    title: "Project 3",
+    title: "Pandas",
+    title2: "Numpy",
     image: card,
   },
   {
     id: 4,
-    title: "Project 4",
+    title: "MONAI",
+    title2: "Transformers",
     image: finance,
   },
   {
     id: 5,
-    title: "Project 5",
+    title: "MNE",
+    title2: "NLTK",
     image: card,
   },
   {
     id: 6,
-    title: "Project 6",
+    title: "Django",
+    title2: "MERN",
     image: finance,
   },
   {
     id: 7,
-    title: "Project 7",
+    title: "Flask",
+    title2: "Fast API",
     image: finance,
   },
   {
     id: 8,
-    title: "Project 8",
+    title: "AWS",
+    title2: "Git",
     image: finance,
   },
   {
     id: 9,
-    title: "Project 9",
+    title: "Tableau",
+    title2: "Power BI",
     image: finance,
   },
   {
     id: 10,
-    title: "Project 10",
+    title: "MatPlotLib",
+    title2: "Tensorflow",
     image: finance,
   },
 ];
@@ -87,6 +97,7 @@ const Carousel = () => {
                 className="mx-auto" // Tailwind class to center the image
               />
               <h3>{project.title}</h3>
+              <h3>{project.title2}</h3>
             </div>
           ))}
         </div>
