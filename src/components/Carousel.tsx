@@ -4,7 +4,7 @@ import React from "react";
 import book from "../assets/book.png";
 import pc from "../assets/pc.png";
 import card from "../assets/card.png";
-import finance from "../assets/finance.png";
+import finance from "../assets/image.png";
 
 // Dummy Data for Projects (Keeping the existing data)
 const projects = [
@@ -12,31 +12,31 @@ const projects = [
     id: 1,
     title: "Python",
     title2: "C",
-    image: book,
+    image: card,
   },
   {
     id: 2,
     title: "Java",
     title2: "JS",
-    image: pc,
+    image: card,
   },
   {
     id: 3,
     title: "Pandas",
     title2: "Numpy",
-    image: card,
+    image: pc,
   },
   {
     id: 4,
     title: "MONAI",
     title2: "Transformers",
-    image: finance,
+    image: pc,
   },
   {
     id: 5,
     title: "MNE",
     title2: "NLTK",
-    image: card,
+    image: pc,
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const projects = [
     id: 10,
     title: "MatPlotLib",
     title2: "Tensorflow",
-    image: finance,
+    image: pc,
   },
 ];
 
@@ -96,8 +96,8 @@ const Carousel = () => {
                 height={150}
                 className="mx-auto" // Tailwind class to center the image
               />
-              <h3>{project.title}</h3>
-              <h3>{project.title2}</h3>
+              <h2>{project.title}</h2>
+              <h2>{project.title2}</h2>
             </div>
           ))}
         </div>

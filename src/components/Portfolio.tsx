@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import project from "../assets/project.jpg";
-import project1 from "../assets/proj1.jpg";
+import project from "../assets/image2.png";
+import project1 from "../assets/image3.png";
+import project2 from "../assets/image5.png";
+import project3 from "../assets/image4.png";
+import project4 from "../assets/image6.png";
 
 const projects = [
   {
@@ -27,7 +30,7 @@ const projects = [
     devStack: "Python • MNE • CNN • SVM • Random Forest",
     link: "https://github.com/manu5703/EEG-Motor-Imagery-Classification.git",
     git: "https://github.com/manu5703/EEG-Motor-Imagery-Classification.git",
-    src: project,
+    src: project2,
   },
   {
     title: "Neurodegenerative Disease Prediction Using Gait Data",
@@ -35,7 +38,7 @@ const projects = [
     devStack: "Python • ML • SMOTE • LIME • 1D CNN",
     link: "https://github.com/manu5703/Neurodegenerative-Disease-prediction",
     git: "https://github.com/manu5703/Neurodegenerative-Disease-prediction",
-    src: project1,
+    src: project3,
   },
   {
     title: "PINN + GAN Hybrid Model for Scientific PDE Modeling",
@@ -43,7 +46,7 @@ const projects = [
     devStack: "PyTorch • PINN • GAN • Scientific ML",
     link: "https://github.com/manu5703/PINN-and-GAN.git",
     git: "https://github.com/manu5703/PINN-and-GAN.git",
-    src: project,
+    src: project4,
   },
 ];
 

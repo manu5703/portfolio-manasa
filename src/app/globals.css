@@ -160,6 +160,6 @@ html, body {
 
 }
 .animate-gradient-xy{
-  animation: gradient-xy 5s ease infinite;
+  animation: gradient-xy 15s ease infinite;
   background-size: 200% 200%;
 } 

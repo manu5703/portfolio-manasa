@@ -34,8 +34,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-base sm:text-lg md:text-xl max-w-[600px] mx-auto mt-8 text-white/80 px-2"
         >
-          I am a full stack developer focused on creating websites that provide
-          the best experience for users.
+          Passionate about AI, machine learning, and building intelligent
+          software solutions.
         </motion.p>
 
         {/* Profile Picture */}
