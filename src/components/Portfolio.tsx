@@ -53,13 +53,14 @@ const projects = [
 const Portfolio = () => {
   return (
     <div
-      className="text-white bg-gradient-to-b from-black to-[#381a5f] py-18 mt-40"
+      className="text-white bg-gradient-to-b from-black to-[#381a5f] py-20 mt-40"
       id="portfolio"
     >
-      <h1 className="text-white text-6xl max-w-[320px] mx-auto font-semibold p-4 mb-4 ">
+      <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-semibold text-center mb-20">
         Selected <span className="text-orange-400">Projects</span>
       </h1>
-      <div className="max-w-[1200px] mx-auto mt-40 space-y-24">
+
+      <div className="max-w-[1200px] mx-auto space-y-24 px-4">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -67,33 +68,52 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className={`flex ${
+            className={`flex items-center gap-10 md:gap-20 ${
               index % 2 === 1
-                ? "flex-col-reverse md:flex-row-reverse gap-12"
+                ? "flex-col-reverse md:flex-row-reverse"
                 : "flex-col md:flex-row"
             }`}
           >
-            <div className="space-y-2 max-w-[550px]">
-              <h2 className="text-7xl my-4 text-white/70">{`${index + 1}`}</h2>
-              <h2 className="text-4xl">{project.title}</h2>
-              <p className="text-lg text-white/70 break-words p-4">
+            {/* Text Section */}
+            <div className="space-y-3 max-w-[550px] w-full">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl text-white/70">
+                {index + 1}
+              </h2>
+
+              <h2 className="text-2xl sm:text-3xl md:text-4xl">
+                {project.title}
+              </h2>
+
+              <p className="text-base sm:text-lg text-white/70 leading-relaxed break-words">
                 {project.desc}
               </p>
-              <p className="text-lg text-orange-400 font-semibold">
+
+              <p className="text-lg sm:text-xl text-orange-400 font-semibold">
                 {project.devStack}
               </p>
-              <div className="w-64 h-[1px] bg-gray-400 my-4">
-                <a href={project.link} className="mr-6">
+
+              <div className="border-b border-gray-400 w-full pb-2">
+                <a
+                  href={project.link}
+                  className="mr-6 hover:text-orange-400 transition"
+                >
                   Link
                 </a>
-                <a href={project.git}>Git</a>
+                <a
+                  href={project.git}
+                  className="hover:text-orange-400 transition"
+                >
+                  Git
+                </a>
               </div>
             </div>
-            <div className="flex justify-center items-center">
+
+            {/* Image Section */}
+            <div className="flex justify-center items-center w-full">
               <Image
                 src={project.src}
                 alt={project.title}
-                className="h-[400px] w-auto object-cover"
+                className="w-full max-w-[400px] h-auto object-cover rounded-lg shadow-lg"
               />
             </div>
           </motion.div>

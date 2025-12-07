@@ -128,6 +128,26 @@ html, body {
   }
 }
 
+/* --- MEDIA QUERY for Mobile Screens (below 768px) --- */
+@media (max-width: 767px) {
+  :root {
+    --carousel-size: 180px;   /* smaller carousel wrapper */
+    --slide-width: 140px;
+    --slide-height: 100px;
+    --translate-z: 250px;     /* reduce 3D depth for mobile */
+    --perspective: 600px;     /* smaller perspective */
+  }
+
+  .slide h3 {
+    font-size: 1.1rem;
+  }
+
+  .slide p {
+    font-size: 0.85rem;
+  }
+}
+
+
 /* Re-apply the transformations using the responsive variable */
 /* These remain the same, as the CSS variable handles the responsive scaling */
 .slide-1 { transform: rotateY(0deg) translateZ(var(--translate-z)); }
@@ -164,54 +184,121 @@ html, body {
   background-size: 200% 200%;
 } 
 
-/* Experience.css */
-
-/* Central vertical timeline line */
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+/* Prevent shrinking on large screens */
+.timeline-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
 }
 
-/* Dot on the timeline */
+/* Make sure the timeline area is full width */
+.timeline-container {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  min-width: 100%;
+}
+
+/* Central line */
+
+
+/* Dot */
 .timeline-dot {
   width: 16px;
   height: 16px;
-  background-color: #f97316; /* orange-500 */
+  background-color: #f97316;
   border-radius: 50%;
-  position: relative;
   z-index: 10;
 }
 
-/* Connecting line from center to card */
+/* Connector */
 .timeline-connector {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
-  top: 6px; /* Align with dot vertically */
-  width: 80px; /* Length of connecting line */
+  top: 7px;
+  width: 80px;
 }
 
 .timeline-connector-left {
-  right: 100%; /* Extend to left card */
+  right: 100%;
 }
 
 .timeline-connector-right {
-  left: 100%; /* Extend to right card */
+  left: 100%;
 }
 
+/* ========================================================= */
+/* ===================== RESPONSIVE UI ====================== */
+/* ========================================================= */
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+
+
+/* Extra small screens */
+@media (max-width: 480px) {
   .timeline-card {
-    width: 90% !important;
-    text-align: center !important;
+    width: 100%;
+    padding: 0.8rem;
   }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding-left: 30px; /* space for left-side line */
+  }
+
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-card {
+    width: 100% !important;
+    margin-left: 1.5rem;
+    text-align: left !important;
+  }
+
+  .timeline-dot {
+    margin-left: 12px;
+  }
+
   .timeline-connector {
-    display: none; /* hide connectors on small screens */
+    display: none; /* hide connectors */
+  }
+}
+/* Medium screens (tablets) */
+/* ----------------------------------------------------------- */
+/* RESPONSIVENESS                                              */
+/* ----------------------------------------------------------- */
+
+/* Medium screens */
+@media (max-width: 992px) {
+  .timeline-card {
+    width: 80%;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-card {
+    width: 100% !important;
+    margin-left: 2.2rem;
+  }
+
+  .timeline-connector {
+    display: none;
   }
 }
