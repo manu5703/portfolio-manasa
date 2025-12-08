@@ -6,6 +6,7 @@ import project1 from "../assets/image3.png";
 import project2 from "../assets/image5.png";
 import project3 from "../assets/image4.png";
 import project4 from "../assets/image6.png";
+import project5 from "../assets/image7.png";
 
 const projects = [
   {
@@ -15,6 +16,15 @@ const projects = [
     link: "https://github.com/manu5703/health-and-yoga-",
     git: "https://github.com/manu5703/health-and-yoga-",
     src: project,
+  },
+  {
+    title: "Smart Course Portal",
+    desc: "Smart Course Portal is a full-stack MERN app where students can view courses, instructors can create courses, and admins manage users and content. It uses JWT authentication, access & refresh tokens, role-based access, and secure cookies for session management, with Node.js, Express, MongoDB, Mongoose, bcrypt on the backend and React, React Router, Axios, Context API on the frontend.",
+    devStack:
+      "React • Secure Cookies • JWT authentication • Role based Access • Node.js • Express • MongoDB ",
+    link: "https://github.com/manu5703/portal.git",
+    git: "https://github.com/manu5703/portal.git",
+    src: project5,
   },
   {
     title: "Library Management System using AWS",
