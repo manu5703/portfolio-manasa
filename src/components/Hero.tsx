@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import profilepic from "../assets/profilepic.png";
+import profilepic from "../assets/emoji1.png";
 
 const Hero = () => {
   return (
