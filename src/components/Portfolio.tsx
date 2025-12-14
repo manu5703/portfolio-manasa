@@ -7,6 +7,7 @@ import project2 from "../assets/image5.png";
 import project3 from "../assets/image4.png";
 import project4 from "../assets/image6.png";
 import project5 from "../assets/image7.png";
+import project6 from "../assets/covid.png";
 
 const projects = [
   {
@@ -18,6 +19,14 @@ const projects = [
     src: project,
   },
   {
+    title: "Covid 19 Data Analysis using Power BI",
+    desc: "The purpose of this analysis is to study global COVID-19 trends and provide country-wise and WHO region-wise insights into confirmed, recovered, and death cases over time using PowerBI Additionally, forecasting techniques are used to predict future case trends for better preparedness and understanding of the pandemic dynamics. ",
+    devStack: "PowerBI ",
+    link: "https://github.com/manu5703/power-bi-dashboard.git",
+    git: "https://github.com/manu5703/power-bi-dashboard.git",
+    src: project6,
+  },
+  {
     title: "Smart Course Portal",
     desc: "Smart Course Portal is a full-stack MERN app where students can view courses, instructors can create courses, and admins manage users and content. It uses JWT authentication, access & refresh tokens, role-based access, and secure cookies for session management, with Node.js, Express, MongoDB, Mongoose, bcrypt on the backend and React, React Router, Axios, Context API on the frontend.",
     devStack:
@@ -26,6 +35,7 @@ const projects = [
     git: "https://github.com/manu5703/portal.git",
     src: project5,
   },
+
   {
     title: "Library Management System using AWS",
     desc: "A cloud-native library management system using AWS Lambda for serverless backend workflows, Amazon S3 for frontend hosting, and CloudWatch for performance monitoring and logging.",
