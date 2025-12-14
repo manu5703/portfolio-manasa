@@ -7,7 +7,7 @@ const experiences = [
     company: "IS 4495 - AI in Business Strategy",
     period: "Aug 2025 - Present",
     description: [
-      "Assisted and supervised students in their final project of building a prototype of an AI-based solution to a real-time business problem, helping them with web development, cloud deployment, and machine learning parts.",
+      "Assisted students in their final project of building a prototype of an AI-based solution to a real-time business problem, helping them with web development, cloud deployment, and machine learning parts.",
       "Assisted Professor David Agogo in designing lab exercises and quizzes for students.",
       "Created videos explaining lab concepts (e.g., working of CI/CD pipeline) for student reference.",
       "Graded students’ assignments and held office hours to clarify their doubts.",
