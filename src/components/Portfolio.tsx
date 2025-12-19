@@ -12,6 +12,22 @@ import project7 from "../assets/brain.png";
 
 const projects = [
   {
+    title: "EEG-Based Motor Imagery Classification",
+    desc: "A deep learning pipeline using EEG preprocessing, PSD extraction, and ML/DL models (CNN, SVM, RF) for classifying mental states. Includes visualizations, EDA, and multi-model performance comparison.",
+    devStack: "Python • MNE • CNN • SVM • Random Forest",
+    link: "https://github.com/manu5703/EEG-Motor-Imagery-Classification.git",
+    git: "https://github.com/manu5703/EEG-Motor-Imagery-Classification.git",
+    src: project2,
+  },
+  {
+    title: "Neurodegenerative Disease Prediction Using Gait Data",
+    desc: "Machine learning models for diagnosing ALS, Parkinson’s, and Huntington’s using gait characteristics. Used SMOTE for imbalance, feature engineering, and LIME for model explainability.",
+    devStack: "Python • ML • SMOTE • LIME • 1D CNN",
+    link: "https://github.com/manu5703/Neurodegenerative-Disease-prediction",
+    git: "https://github.com/manu5703/Neurodegenerative-Disease-prediction",
+    src: project3,
+  },
+  {
     title: "Brain Tumor segmentation using medical imaging",
     desc: "Developed and evaluated deep learning models for brain tumor segmentation using U-Net, V-Net, and an AutoML-optimized U-Net.",
     devStack: "CNN • Medical Imaging ",
@@ -45,22 +61,7 @@ const projects = [
     git: "https://github.com/manu5703/Library-Management-System-Using-AWS.git",
     src: project1,
   },
-  {
-    title: "EEG-Based Motor Imagery Classification",
-    desc: "A deep learning pipeline using EEG preprocessing, PSD extraction, and ML/DL models (CNN, SVM, RF) for classifying mental states. Includes visualizations, EDA, and multi-model performance comparison.",
-    devStack: "Python • MNE • CNN • SVM • Random Forest",
-    link: "https://github.com/manu5703/EEG-Motor-Imagery-Classification.git",
-    git: "https://github.com/manu5703/EEG-Motor-Imagery-Classification.git",
-    src: project2,
-  },
-  {
-    title: "Neurodegenerative Disease Prediction Using Gait Data",
-    desc: "Machine learning models for diagnosing ALS, Parkinson’s, and Huntington’s using gait characteristics. Used SMOTE for imbalance, feature engineering, and LIME for model explainability.",
-    devStack: "Python • ML • SMOTE • LIME • 1D CNN",
-    link: "https://github.com/manu5703/Neurodegenerative-Disease-prediction",
-    git: "https://github.com/manu5703/Neurodegenerative-Disease-prediction",
-    src: project3,
-  },
+
   {
     title: "PINN + GAN Hybrid Model for Scientific PDE Modeling",
     desc: "A Physics-Informed Neural Network combined with GANs to solve 2D heat equations with higher accuracy, reducing RMSE and improving physical consistency in predictions.",
