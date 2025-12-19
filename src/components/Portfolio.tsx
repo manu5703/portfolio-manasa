@@ -8,8 +8,18 @@ import project3 from "../assets/image4.png";
 import project4 from "../assets/image6.png";
 import project5 from "../assets/image7.png";
 import project6 from "../assets/covid.png";
+import project7 from "../assets/brain.png";
 
 const projects = [
+  {
+    title: "Brain Tumor segmentation using medical imaging",
+    desc: "Developed and evaluated deep learning models for brain tumor segmentation using U-Net, V-Net, and an AutoML-optimized U-Net.",
+    devStack: "CNN • Medical Imaging ",
+    link: "https://github.com/manu5703/Medical-Imaging.git",
+    git: "https://github.com/manu5703/Medical-Imaging.git",
+    src: project7,
+  },
+
   {
     title: "Personalized Yoga Recommendation & Posture Correction",
     desc: "A transformer-based wellness platform offering personalized yoga posture recommendations using FAISS semantic search and E5 embeddings. Includes real-time posture correction using MoveNet and CNN angle analysis with audio feedback.",
@@ -25,15 +35,6 @@ const projects = [
     link: "https://github.com/manu5703/power-bi-dashboard.git",
     git: "https://github.com/manu5703/power-bi-dashboard.git",
     src: project6,
-  },
-  {
-    title: "Smart Course Portal",
-    desc: "Smart Course Portal is a full-stack MERN app where students can view courses, instructors can create courses, and admins manage users and content. It uses JWT authentication, access & refresh tokens, role-based access, and secure cookies for session management, with Node.js, Express, MongoDB, Mongoose, bcrypt on the backend and React, React Router, Axios, Context API on the frontend.",
-    devStack:
-      "React • Secure Cookies • JWT authentication • Role based Access • Node.js • Express • MongoDB ",
-    link: "https://github.com/manu5703/portal.git",
-    git: "https://github.com/manu5703/portal.git",
-    src: project5,
   },
 
   {
