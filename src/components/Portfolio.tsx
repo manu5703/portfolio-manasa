@@ -6,7 +6,7 @@ import project1 from "../assets/image3.png";
 import project2 from "../assets/image5.png";
 import project3 from "../assets/image4.png";
 import project4 from "../assets/image6.png";
-import project5 from "../assets/image7.png";
+//import project5 from "../assets/image7.png";
 import project6 from "../assets/covid.png";
 import project7 from "../assets/brain.png";
 
